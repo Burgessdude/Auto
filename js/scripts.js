@@ -26,6 +26,7 @@ for (let x = 0; x < reviews.length; x++){
     for (let step = 0; step < reviews[x].stars; step++) {
         const genIndicator = document.createElement('img')
         genIndicator.src = "./images/star.png"
+        genIndicator.setAttribute("alt","Star Image")
         myRating.appendChild(genIndicator)
     }
 
