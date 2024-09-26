@@ -1,0 +1,43 @@
+header, nav, main {
+    max-width: 960px;
+    margin: auto;
+}
+header, nav, main {
+    max-width: 960px;
+    margin: auto;
+}
+
+/* NAVIGATION STUFF GOES HERE  */
+#myButton {
+    display: none;
+}
+ul.menuLinks li a {
+    padding: .4rem 1rem;
+}
+ul.menuLinks, ul.menuLinks.open {
+    display: flex;
+    justify-content: flex-end;
+}
+ul.menuLinks a:hover {
+    background-color: $secondaryColor;
+}
+
+div.allCards {
+    section {
+        flex-basis: calc(25% - (($gutter)/1));
+    }
+}
+
+footer div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gutter;
+    section {
+        flex-basis: calc(50% - ($gutter/2));
+    }
+}

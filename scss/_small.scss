@@ -1,0 +1,275 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*  Apply a natural box layout model to all elements  */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} // end all elements
+
+
+/* --------------------------- BODY --------------------------- */
+body {
+    font-family: $defaultFont;
+    font-weight: $lightWeight;
+    min-width: 320px;
+}
+
+
+/* --------------------------- HEADER --------------------------- */
+#headerWrapper {border-bottom: 1px solid $greyColor;}
+header {
+    display: grid;
+    grid-template-columns: 50px auto;
+    column-gap: $gutter;
+    align-items: center; //vertically
+    padding: .5rem $gutter;
+    span {
+        font-size: 1.6rem;
+        font-weight: $lightWeight;
+        color: $primaryColor;
+    }
+    font-size: 2rem;
+    padding: 1rem $gutter;
+    color: $greyColor;
+    text-align: center;
+    line-height: $leading;
+    background-color: rgb(236, 236, 236);
+    a {color: $primaryColor;
+    text-decoration: none;}
+    
+} // end header
+
+
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+#theButton {
+    border: none;
+    background: none;
+    font-size: 2rem;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+#theButton::before {
+    content: "☰";
+  }
+
+#theNav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li a {
+        color: $primaryColor;
+        display: block;
+        padding: .75rem $gutter;
+        text-decoration: none;
+        border-bottom: 1px solid $greyColor;
+    }
+    li.active a {
+        color: red;
+        font-weight: 700;
+    }
+}
+
+#theButton.open::before {
+    content: "\2715";
+}
+
+#theNav {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+    ul {
+        overflow: hidden;
+    }
+}
+
+#theNav.open {
+    grid-template-rows: 1fr;
+}
+
+.parentHero {
+    position: relative;
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    p {
+        position: absolute;
+        margin: 0;
+        background: linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+        padding: 1rem;
+        top: calc(50% - 35px);
+        width: 80%;
+        left: 10%;
+        text-align: center;
+        color: #600;
+        font-size: 2rem;
+    }
+}
+
+h1 {
+    margin: 0;
+}
+
+div.allCards {
+    padding: 0 $gutter;
+    section {
+        border: 1px solid darkgreen;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 1rem 0;
+        h2, p, img{
+            margin: 0;
+            padding: 1rem $gutter;
+        }
+        h2 {
+            background-color: #2b7678;
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        img {
+            width: 50px;
+            height: auto;
+            display: center;
+        }
+        img.e2e {
+            padding: 0;
+        }
+        p {
+            font-style: italic;
+        }
+        a {
+            display: block;
+            background-color: rgb(185, 43, 43);
+            padding: .75rem;
+            text-align: center;
+            margin: 0 3rem 1rem 3rem;
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+        }
+    }
+    padding: 0 8px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px,fr));
+    gap: 24px 8px;
+    section {
+        border: 1px dashed deeppink;
+        padding: 1rem;
+        text-align: center;
+    }
+}
+section img {
+    width: 50px;
+    position: relative;
+}
+.shape {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: black 1px solid;
+    margin: auto;
+    background-color: red;
+    padding-top: 20rem;
+}
+.bounce:hover img {animation: myBounce 1s 1;}
+.spin:hover img {animation: mySpin 1s 1;}
+.pulse:hover img {animation: myPulse 1s 1;}
+.color:hover img {animation: myColor 5s 3;}
+
+@keyframes myBounce {
+    0% {bottom: 0px; animation-timing-function: ease-out;}
+    25% {bottom: 15px; animation-timing-function: ease-in;}
+    50% {bottom: 0px; animation-timing-function: ease-out;}
+    75% {bottom: 7px; animation-timing-function: ease-in;}
+    100% {bottom: 0px; animation-timing-function: ease-out;}
+}
+
+@keyframes mySpin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes myPulse {
+    0% {transform: scale(1.0);}
+    25% {transform: scale(1.5);}
+    50% {transform: scale(.75);}
+    75% {transform: scale(1.25);}
+    100% {transform: scale(1.0);}
+}
+
+@keyframes myColor {
+    0% {background-color: red;}
+    15% {background-color: orange;}
+    30% {background-color: yellow;}
+    45% {background-color: green;}
+    60% {background-color: blue;}
+    75% {background-color: indigo;}
+    90% {background-color: violet;}
+    100% {background-color: red;}
+}
+
+div.reviewWrapper {
+    background-color: #f7f7f7;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+#cards {
+    text-align: center;
+    h3 {
+        margin: 2rem $gutter 0 $gutter;
+        text-align: center;
+        color: #000;
+        font-weight: $normalWeight;
+    }
+    img {
+        width: 20px;
+    }
+}
+
+
+
+
+/* --------------------------- MAIN --------------------------- */
+main {
+    h1 {
+        padding: 1rem $gutter.5rem $gutter;
+        font-size: 1.5rem;
+        color: $secondaryColor;
+        font-weight: $lightWeight
+    }
+    p {
+        padding: .5rem $gutter;
+        color: #333;
+        line-height: $leading;
+    }
+}// end main
+
+
+
+/* --------------------------- FOOTER --------------------------- */
+#footerWrapper {
+    background-color: $primaryColor
+} // end footer wrapper
+
+footer {
+    font-size: .85rem;
+    padding: 1rem $gutter;
+    color: $greyColor;
+    text-align: center;
+    line-height: $leading;
+    a {color: $greyColor;}
+}// end footer

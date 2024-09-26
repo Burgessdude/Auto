@@ -1,0 +1,42 @@
+/* NAVIGATION STUFF GOES HERE  */
+#theButton {
+    display: none;
+}
+
+#theNav {
+    grid-template-rows: 1fr;
+}
+
+#theNav ul, #theNav ul.open {
+    display: flex;
+    li a {
+        padding: .4rem 1rem;
+        border: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+#navWrapper {
+    border-bottom: 1px solid $greyColor;
+}
+#headerWrapper {
+    header{padding: 2rem $gutter;}
+    h1{font-size: 2rem;}
+}
+
+div.allCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gutter;
+    section {
+        flex-basis: calc(50% - ($gutter/2));
+    }
+}
+
+footer div {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}

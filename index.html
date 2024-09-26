@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Navigation Example</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/styles.min.css">
+
+<!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<div id="headerWrapper">
+	<header>
+        <img src="images/logo45.png" alt="site logo" width="100"
+            srcset="images/logo45.png 1x, images/logo50.png 2x, images/logo75.png 3x">
+        <a href="tel:5554723829"> 555-472-3829</a>
+	</header>
+</div><!-- end header wrapper -->
+
+    
+    
+<div id="navWrapper">
+    <nav id="theNav">
+        <button id="theButton"></button>
+        <ul>
+            <li><a href="#">Clients</a></li>
+            <li><a href="#">Services</a></li>
+            <li class="active"><a href="#">Our Vehicles</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</div> <!-- end nav wrapper -->
+
+<div id="mainWrapper">
+    <main>
+        <div class="parentHero">
+            <img src="images/bronco.webp" width="1200" height="500" alt="Ford Bronco">
+            <p>Welcome to Greg's Garage!</p>
+        </div>
+        <h1>
+            Our Vehicles
+        </h1>
+        <p>
+            All of our cars are top of the line models! If something catches your 
+            eye make sure to come and visit us in person for a deal!
+        </p>
+        <div class="allCards">
+            <section class="bounce">
+                <h2>BMW I8</h2>
+                <img src="images/car.svg" alt="BMW I8" class="e2e">
+                <p>The BMW i8 Coupe and BMW i8 Roadster are no longer in production. 
+                    Explore the latest plug-in hybrid and all-electric vehicles in the BMW lineup.
+                </p>
+                <a href="#">Learn More</a>
+            </section>
+
+            <section class="spin">
+                <h2>Lamborghini</h2>
+                <img src="images/wheel.png" alt="Lamborghini Aventador" class="e2e">
+                <p>The Lamborghini Aventador is a mid-engine sports car that was produced by 
+                    the Italian automotive manufacturer Lamborghini from 2011 until 2022.
+                </p>
+                <a href="#">Learn More</a>
+            </section>
+
+            <section class="pulse">
+                <h2>Tesla Model Y</h2>
+                <img src="images/lightning.svg" alt="Tesla Model Y" class="e2e">  
+                <p>Model Y is a fully electric, mid-size SUV with unparalleled 
+                    protection and versatile cargo space.
+                </p>
+                <a href="#">Learn More</a>
+            </section>
+
+            <section class="color">
+                <h2>Bugatti Veyron</h2>
+                <img src="images/gear.png" alt="Bugatti Veyron" class="e2e">
+                <p>The Bugatti Veyron EB 16.4 is a mid-engine sports car, designed and developed in 
+                    Germany by the Volkswagen Group and Bugatti and manufactured in Molsheim, France.
+                </p>
+                <a href="#">Learn More</a>
+            </section>
+        </div>
+        <div class="reviewWrapper">
+            <h2>What our Customers Say</h2>
+            <div id="cards"></div>
+        </div>
+    </main>
+</div><!-- end main wrapper -->
+    
+<div id="footerWrapper">
+    <footer>
+        <p class="legal">&copy; <span id="year">2024</span> &bull; Jacob Burgess 
+        </p>
+    </footer>
+</div> <!-- end footer wrapper -->
+<script src="js/scripts.js" type="module"></script>
+</body>
+</html> 
